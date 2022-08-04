@@ -1,0 +1,33 @@
+.header {
+    background-color: transparent;
+    width: 100%;
+    max-width: 1170px;
+    display: flex;
+    position: fixed;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.title {
+    font-weight: 500;
+    font-size: 18px;
+}
+
+.navbar{
+    ul {
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        list-style: none;
+    }
+
+    span {
+        /* text-transform: uppercase; */
+        // color: #fff;
+        margin-left: 25px;
+        transition: color 0.2s;
+        &:hover {
+          color: #FCA311;
+        }
+    }
+}

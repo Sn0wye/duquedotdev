@@ -1,0 +1,40 @@
+.footerArea{
+    display: flex;
+    justify-content: center;
+    max-width: 1170px;
+    padding: 100px 0 100px 0;
+}
+
+.footerContent{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 800px;
+}
+
+.leftFooter{
+
+    h2{
+        font-size: 55px;
+        font-weight: 900;
+        color: #FCA311;
+    }
+
+    p{
+        font-size: 35px;
+        font-weight: 900;
+    }
+}
+.rightFooter{
+    li {
+        font-size: 35px;
+        font-weight: 800;
+        text-decoration: none;
+        list-style: none;
+        transition: 0.2s;
+        &:hover{
+            color: #FCA311;
+        }
+    }
+    
+}

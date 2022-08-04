@@ -1,0 +1,30 @@
+.toptext {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    // max-width: 870px;
+    p {
+        color: #14213D;
+        font-weight: 600;
+        font-size: 58px;
+        span {
+            color: #FCA311;
+        }
+    }
+}
+
+.first {
+
+    padding: 180px 0 0 0;
+
+    display: flex;
+    justify-content: flex-end;
+    width: 800px;
+}
+
+.second {
+    display: flex;
+    justify-content: flex-end;
+    width: 800px;
+}
+
