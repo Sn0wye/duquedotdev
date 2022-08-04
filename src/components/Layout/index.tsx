@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import { PropsWithChildren } from 'react';
 import { Footer } from '../Footer';
-import { Header } from '../Header';
+import { Header } from '../Navbar';
 
 export const Layout = ({ children }: PropsWithChildren) => {
     return (
