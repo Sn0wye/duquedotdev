@@ -1,4 +1,4 @@
-import { HalfCardWithoutTitle } from '../../components/HarlfCardWithoutTitle';
+import { HalfCard } from '../../components/HalfCard';
 import { RepositoriesCards } from '../../components/RepositoriesCards';
 import { TechCardsTextMidle } from '../../components/TechCardsTextBoth';
 import { TechCardsTextLeft } from '../../components/TechCardsTextLeft';
@@ -12,7 +12,7 @@ export default function Tech() {
             <TechCardsTextLeft />
             <RepositoriesCards />
             <TechCardsTextRight />
-            <HalfCardWithoutTitle />
+            <HalfCard showTitle={false} />
             <TechCardsTextMidle />
             {/* <Nutshell /> */}
         </div>
