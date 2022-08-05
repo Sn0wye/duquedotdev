@@ -7,7 +7,7 @@ export function Footer() {
                 <div className={styles.leftFooter}>
                     <h2>find me</h2>
                     <p>digitally</p>
-                    <span>© 2021 Felipe Duque</span>
+                    <span>© 2022 Felipe Duque</span>
                 </div>
                 <div className={styles.rightFooter}>
                     <ul>
