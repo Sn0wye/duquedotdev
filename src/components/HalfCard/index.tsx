@@ -1,20 +1,38 @@
-import styles from './styles.module.scss';
+import {
+    AssetArea,
+    CardLink,
+    CardTitle,
+    Container,
+    Content,
+    ContentCard,
+} from './styles';
 
-export function HalfCards() {
+interface HalfCardProps {
+    showTitle?: boolean;
+}
+
+export function HalfCard({ showTitle = true }: HalfCardProps) {
     return (
-        <div className={styles.cardAreaHalf}>
-            <div className={styles.cardHalf}>
-                <div className={styles.assetAreaHalf} />
-                <div className={styles.titleAreaHalf}>
-                    <div className={styles.cardTitleHalf}>
-                        <p>desafios</p>
-                        <p>ativos</p>
-                    </div>
-                    <div className={styles.cardLinkHalf}>
-                        <span>github</span>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <Container>
+            <Content>
+                <AssetArea />
+                {showTitle && (
+                    <ContentCard>
+                        <CardTitle>
+                            <h3>desafios</h3>
+                            <h3>ativos</h3>
+                        </CardTitle>
+
+                        <CardLink
+                            href="https://github.com/duquedotdev"
+                            target="_blank"
+                            rel="noreferrer"
+                        >
+                            github
+                        </CardLink>
+                    </ContentCard>
+                )}
+            </Content>
+        </Container>
     );
 }
