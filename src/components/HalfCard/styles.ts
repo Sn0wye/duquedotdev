@@ -1,50 +1,50 @@
 import styled, { keyframes } from 'styled-components';
 
 export const Container = styled.div`
-    display: flex;
-    justify-content: center;
-    max-width: 1170px;
+  display: flex;
+  justify-content: center;
+  max-width: 1170px;
 `;
 
 export const AssetArea = styled.div`
-    background-color: #c2c2c2;
-    flex: 1;
+  background-color: #c2c2c2;
+  flex: 1;
 `;
 
 export const ContentCard = styled.div`
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-evenly;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
 
-    flex: 1;
+  flex: 1;
 `;
 
 export const Content = styled.section`
-    display: flex;
-    justify-content: space-between;
-    margin: 3.125rem 0 0 0;
-    height: 18.75rem;
-    max-width: 50rem;
-    width: 100%;
-    background-color: #14213d;
+  display: flex;
+  justify-content: space-between;
+  margin: 3.125rem 0 0 0;
+  height: 18.75rem;
+  max-width: 50rem;
+  width: 100%;
+  background-color: #14213d;
 `;
 
-export const CardTitle = styled.h1`
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+export const CardTitle = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
-    h3 {
-        color: #fca311;
-        font-weight: 700;
-        font-size: 2.5rem;
-        transition: 0.2s;
+  h3 {
+    color: #fca311;
+    font-weight: 700;
+    font-size: 2.5rem;
+    transition: 0.2s;
 
-        &:hover {
-            opacity: 0.7;
-        }
+    &:hover {
+      opacity: 0.7;
     }
+  }
 `;
 
 const slideDown = keyframes`
@@ -64,26 +64,26 @@ const slideDown = keyframes`
 `;
 
 export const CardLink = styled.a`
-    all: unset;
-    color: #ecf0f3;
-    font-size: 1.5rem;
-    transition: 0.2s;
-    cursor: pointer;
-    position: relative;
+  all: unset;
+  color: #ecf0f3;
+  font-size: 1.5rem;
+  transition: 0.2s;
+  cursor: pointer;
+  position: relative;
 
-    &:hover {
-        /* border-bottom: 2px solid #ecf0f3; */
-        /* padding-bottom: 5px; */
-        &::after {
-            content: '';
-            display: block;
-            height: 2px;
-            position: absolute;
-            bottom: -5px;
-            left: 0;
-            width: 100%;
-            background-color: #ecf0f3;
-            animation: ${slideDown} 0.2s ease-in-out;
-        }
+  &:hover {
+    /* border-bottom: 2px solid #ecf0f3; */
+    /* padding-bottom: 5px; */
+    &::after {
+      content: '';
+      display: block;
+      height: 2px;
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+      width: 100%;
+      background-color: #ecf0f3;
+      animation: ${slideDown} 0.2s ease-in-out;
     }
+  }
 `;
