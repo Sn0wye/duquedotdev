@@ -11,23 +11,25 @@ export const AssetArea = styled.div`
   flex: 1;
 `;
 
-export const ContentCard = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-evenly;
-
-  flex: 1;
-`;
-
 export const Content = styled.section`
   display: flex;
   justify-content: space-between;
   margin: 3.125rem 0 0 0;
-  height: 18.75rem;
+  min-height: 18.75rem;
   max-width: 50rem;
   width: 100%;
   background-color: #14213d;
+`;
+
+export const CardContent = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* justify-content: space-evenly; */
+
+  flex: 1;
+
+  padding: 3rem 0;
 `;
 
 export const CardTitle = styled.div`
@@ -70,6 +72,8 @@ export const CardLink = styled.a`
   transition: 0.2s;
   cursor: pointer;
   position: relative;
+
+  margin-top: 2rem;
 
   &:hover {
     /* border-bottom: 2px solid #ecf0f3; */
