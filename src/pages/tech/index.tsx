@@ -2,12 +2,12 @@ import { RepositoriesCards } from '../../components/RepositoriesCards';
 import { TechCardsTextMidle } from '../../components/TechCardsTextBoth';
 import { TechCardsTextLeft } from '../../components/TechCardsTextLeft';
 import { TechCardsTextRight } from '../../components/TechCardsTextRight';
-import { TopText } from '../../components/TopText';
+import { Title } from '../../components/Title';
 
 export default function Tech() {
   return (
     <div className="tech">
-      <TopText />
+      <Title />
       <TechCardsTextLeft />
       <RepositoriesCards />
       <TechCardsTextRight />

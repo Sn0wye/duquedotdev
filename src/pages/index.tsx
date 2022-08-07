@@ -1,12 +1,12 @@
 import { Blog } from '../components/Blog';
 import { HalfCard } from '../components/HalfCard';
 import { RepositoriesCards } from '../components/RepositoriesCards';
-import { TopText } from '../components/TopText';
+import { Title } from '../components/Title';
 
 export default function Home() {
   return (
     <div className="home">
-      <TopText />
+      <Title />
 
       <HalfCard
         titleSide="right"
