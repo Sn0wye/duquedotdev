@@ -1,3 +1,4 @@
+import { HalfCard } from '../../components/HalfCard';
 import { Nutshell } from '../../components/Nutshell';
 import { RepositoriesCards } from '../../components/RepositoriesCards';
 import { Title } from '../../components/Title';
@@ -7,7 +8,7 @@ export default function About() {
     <div className="home">
       <Title />
       <RepositoriesCards />
-      {/* <HalfCard showTitle={false} title="" titleSide="right" /> */}
+      <HalfCard showTitle={false} title="" titleSide="right" />
       <RepositoriesCards />
       <Nutshell />
     </div>
