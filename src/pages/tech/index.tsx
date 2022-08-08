@@ -1,4 +1,5 @@
 import { HalfCard } from '../../components/HalfCard';
+import { Nutshell } from '../../components/Nutshell';
 import { TechCardsRow } from '../../components/TechCardsRow';
 import { Title } from '../../components/Title';
 
@@ -34,7 +35,7 @@ export default function Tech() {
           position: 'middle',
         }}
       />
-      {/* <Nutshell /> */}
+      <Nutshell />
     </div>
   );
 }
