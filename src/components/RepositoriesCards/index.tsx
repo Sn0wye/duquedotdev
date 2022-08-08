@@ -1,13 +1,13 @@
-import styles from './styles.module.scss';
+import { Card, Container, Content } from './styles';
 
 export function RepositoriesCards() {
-    return (
-        <div className={styles.cardAreaRepository}>
-            <div className={styles.cardRepository}>
-                <div className={styles.assetAreaRepository} />
-                <div className={styles.assetAreaRepository} />
-                <div className={styles.assetAreaRepository} />
-            </div>
-        </div>
-    );
+  return (
+    <Container>
+      <Content>
+        <Card />
+        <Card />
+        <Card />
+      </Content>
+    </Container>
+  );
 }
