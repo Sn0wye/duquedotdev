@@ -1,18 +1,19 @@
 import Head from 'next/head';
 import { PropsWithChildren } from 'react';
 import { Footer } from '../Footer';
-import { Header } from '../Navbar';
+import { Navbar } from '../Navbar';
+import { Container } from './styles';
 
 export const Layout = ({ children }: PropsWithChildren) => {
-    return (
-        <>
-            <Head>
-                <title>&lt;duque.dev &#47;&gt;</title>
-            </Head>
+  return (
+    <Container>
+      <Head>
+        <title>&lt;duque.dev &#47;&gt;</title>
+      </Head>
 
-            <Header />
-            {children}
-            <Footer />
-        </>
-    );
+      <Navbar />
+      {children}
+      <Footer />
+    </Container>
+  );
 };
