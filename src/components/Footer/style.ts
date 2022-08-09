@@ -3,7 +3,6 @@ import styled from 'styled-components';
 export const Container = styled.footer`
   display: flex;
   justify-content: center;
-  max-width: 1170px;
   padding: 100px 0 100px 0;
 `;
 

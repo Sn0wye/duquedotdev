@@ -3,7 +3,7 @@ import styled, { keyframes } from 'styled-components';
 export const Container = styled.div`
   display: flex;
   justify-content: center;
-  max-width: 1170px;
+  width: 100%;
 `;
 
 export const AssetArea = styled.div`
