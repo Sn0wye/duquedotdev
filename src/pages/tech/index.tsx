@@ -5,7 +5,7 @@ import { Title } from '../../components/Title';
 
 export default function Tech() {
   return (
-    <div className="tech">
+    <>
       <Title />
       <TechCardsRow
         textCard={{
@@ -36,6 +36,6 @@ export default function Tech() {
         }}
       />
       <Nutshell />
-    </div>
+    </>
   );
 }

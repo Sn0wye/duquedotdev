@@ -5,7 +5,7 @@ import { Title } from '../components/Title';
 
 export default function Home() {
   return (
-    <div className="home">
+    <>
       <Title />
 
       <HalfCard
@@ -36,6 +36,6 @@ export default function Home() {
       />
       <RepositoriesCards />
       <Blog />
-    </div>
+    </>
   );
 }
