@@ -5,13 +5,18 @@ export const Container = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 100px 0 0 0;
+  margin-top: 5rem;
+  padding: 0 1rem;
 
   h1 {
     color: #fca311;
     font-size: 3.25rem;
     width: 100%;
     max-width: 800px;
+  }
+
+  @media (max-width: 768px) {
+    margin-top: 1.5rem;
   }
 `;
 
@@ -20,12 +25,19 @@ export const Content = styled.section`
   max-width: 800px;
   display: flex;
   justify-content: space-between;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+  }
 `;
 
 export const Article = styled.article`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  width: 100%;
   max-width: 300px;
 
   h2 {
@@ -42,5 +54,9 @@ export const Article = styled.article`
   p {
     padding-top: 1.25rem;
     font-size: 0.875rem;
+  }
+
+  @media (max-width: 768px) {
+    max-width: 100%;
   }
 `;

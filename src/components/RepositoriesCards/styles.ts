@@ -9,9 +9,14 @@ export const Container = styled.div`
 export const Content = styled.div`
   display: flex;
   justify-content: space-between;
-  margin: 20px 0 0 0;
+  margin-top: 0.5rem;
   height: 12.5rem;
   width: 50rem;
+  gap: 0.5rem;
+
+  @media (max-width: 768px) {
+    width: 100%;
+  }
 `;
 
 export const Card = styled.div`

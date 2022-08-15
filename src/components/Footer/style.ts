@@ -3,7 +3,8 @@ import styled from 'styled-components';
 export const Container = styled.footer`
   display: flex;
   justify-content: center;
-  padding: 100px 0 100px 0;
+  margin-top: 5rem;
+  padding: 1rem;
 `;
 
 export const Content = styled.div`
@@ -30,6 +31,10 @@ export const SocialLink = styled.a`
 
   &:hover {
     color: #fca311;
+  }
+
+  @media (max-width: 768px) {
+    font-size: 1.5rem;
   }
 `;
 

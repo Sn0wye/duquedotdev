@@ -9,9 +9,13 @@ export const Container = styled.div`
 export const Content = styled.div`
   display: flex;
   justify-content: space-between;
-  margin: 20px 0 0 0;
+  margin-top: 1.25rem;
   height: 200px;
   width: 800px;
+
+  @media (max-width: 768px) {
+    width: 100%;
+  }
 `;
 
 export const StyledTextCard = styled.div`
@@ -23,8 +27,13 @@ export const StyledTextCard = styled.div`
   p {
     font-size: 0.875rem;
   }
-  height: 12.5rem;
-  width: 15.625rem;
+  /* height: 12.5rem;
+  width: 15.625rem; */
+  aspect-ratio: 1/1;
+
+  @media (max-width: 768px) {
+    width: 100%;
+  }
 `;
 
 export const AssetCard = styled.div`

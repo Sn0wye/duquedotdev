@@ -9,23 +9,33 @@ export const Container = styled.div`
 export const AssetArea = styled.div`
   background-color: #c2c2c2;
   flex: 1;
+
+  @media (max-width: 768px) {
+    width: 100%;
+    aspect-ratio: 1/1;
+    gap: 0.5rem;
+  }
 `;
 
 export const Content = styled.section`
   display: flex;
   justify-content: space-between;
   margin: 3.125rem 0 0 0;
-  min-height: 18.75rem;
   max-width: 50rem;
   width: 100%;
   background-color: #14213d;
+
+  @media (max-width: 768px) {
+    width: 100%;
+    flex-direction: column;
+  }
 `;
 
 export const CardContent = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* justify-content: space-evenly; */
+  justify-content: center;
 
   flex: 1;
 
