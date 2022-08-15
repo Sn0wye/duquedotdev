@@ -7,6 +7,12 @@ export const Container = styled.div`
   align-items: center;
   width: 100%;
   padding: 3rem 2rem 0;
+
+  margin-bottom: 2rem;
+
+  @media (max-width: 768px) {
+    margin-bottom: 1.5rem;
+  }
 `;
 
 export const Content = styled.div`

@@ -6,6 +6,11 @@ export const Container = styled.div`
   width: 100%;
 
   margin-top: 6.25rem;
+  padding: 0 1rem;
+
+  @media (max-width: 768px) {
+    margin-top: 1.5rem;
+  }
 `;
 
 export const Content = styled.div`
@@ -33,15 +38,25 @@ export const Article = styled.article`
   flex-direction: row;
   align-items: flex-end;
   justify-content: space-between;
-  max-width: 250px;
+  width: 100%;
+  margin-top: 1.25rem;
 
   p {
-    margin-top: 1.25rem;
     font-size: 0.875rem;
+  }
+
+  @media (max-width: 768px) {
   }
 `;
 
 export const Articles = styled.div`
   display: flex;
   justify-content: space-between;
+  width: 100%;
+  gap: 2.5rem;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    gap: 0;
+  }
 `;

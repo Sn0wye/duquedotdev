@@ -4,8 +4,23 @@ export const Container = styled.div`
   display: flex;
   justify-content: center;
   width: 100%;
+  padding: 0 0.5rem;
+  margin-top: 0.5rem;
 `;
 
+export const Content = styled.section`
+  display: flex;
+  justify-content: space-between;
+  max-width: 50rem;
+  width: 100%;
+  background-color: #14213d;
+  gap: 0.5rem;
+
+  @media (max-width: 768px) {
+    width: 100%;
+    flex-direction: column;
+  }
+`;
 export const AssetArea = styled.div`
   background-color: #c2c2c2;
   flex: 1;
@@ -14,20 +29,6 @@ export const AssetArea = styled.div`
     width: 100%;
     aspect-ratio: 1/1;
     gap: 0.5rem;
-  }
-`;
-
-export const Content = styled.section`
-  display: flex;
-  justify-content: space-between;
-  margin: 3.125rem 0 0 0;
-  max-width: 50rem;
-  width: 100%;
-  background-color: #14213d;
-
-  @media (max-width: 768px) {
-    width: 100%;
-    flex-direction: column;
   }
 `;
 

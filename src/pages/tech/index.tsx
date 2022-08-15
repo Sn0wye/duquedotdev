@@ -27,6 +27,7 @@ export default function Tech() {
       />
 
       <HalfCard showTitle={false} title="" titleSide="right" />
+
       <TechCardsRow
         textCard={{
           title: 'software qa',
