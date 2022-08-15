@@ -15,7 +15,6 @@ export const Container = styled.header`
   top: 0;
 
   @media (max-width: 1202px) {
-    // 1170px + 2rem(padding)
     position: relative;
   }
 `;
