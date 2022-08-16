@@ -13,7 +13,6 @@ export const Content = styled.section`
   justify-content: space-between;
   max-width: 50rem;
   width: 100%;
-  background-color: #14213d;
   gap: 0.5rem;
 
   @media (max-width: 768px) {
@@ -24,12 +23,8 @@ export const Content = styled.section`
 export const AssetArea = styled.div`
   background-color: #c2c2c2;
   flex: 1;
-
-  @media (max-width: 768px) {
-    width: 100%;
-    aspect-ratio: 1/1;
-    gap: 0.5rem;
-  }
+  width: 100%;
+  aspect-ratio: 1/1;
 `;
 
 export const CardContent = styled.div`
@@ -37,6 +32,7 @@ export const CardContent = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  background-color: #14213d;
 
   flex: 1;
 
