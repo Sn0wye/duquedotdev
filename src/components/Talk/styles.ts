@@ -76,17 +76,16 @@ export const ErrorMessage = styled.p`
 
 export const Button = styled.button`
   color: var(--text-body);
-  background: lightgray;
+  background: #8f9ba8;
   border: 1px solid transparent;
   cursor: pointer;
   padding: 0.625rem;
   margin-top: 0.3125rem;
-  transition: all 0.2s ease-in-out;
+  transition: all 0.3s ease-in-out;
 
   &:hover {
-    background: transparent;
+    background: var(--primary);
     border-color: var(--primary);
-    color: var(--primary);
   }
 
   &:focus {
