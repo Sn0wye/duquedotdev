@@ -5,6 +5,10 @@ export const Container = styled.footer`
   justify-content: center;
   margin-top: 5rem;
   padding: 1rem;
+
+  @media (max-width: 768px) {
+    margin-top: 2rem;
+  }
 `;
 
 export const Content = styled.div`
