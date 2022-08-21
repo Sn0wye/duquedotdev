@@ -67,7 +67,7 @@ export const Textarea = styled.textarea`
   }
 `;
 
-export const Error = styled.p`
+export const ErrorMessage = styled.p`
   font-style: italic;
   color: #e3242b;
   padding-top: 0.25rem;
