@@ -19,9 +19,11 @@ import { Title } from '../../components/Title';
 import toast, { Toaster } from 'react-hot-toast';
 
 const emailSchema = z.object({
-  name: z.string(),
-  email: z.string().email(),
-  message: z.string(),
+  name: z.string({ required_error: 'Nome e obrigatório' }),
+  email: z
+    .string({ required_error: 'E-mail é obrigatório' })
+    .email({ message: 'E-mail inválido' }),
+  message: z.string({ required_error: 'Mensagem é obrigatória' }),
 });
 
 interface IEmailInputs {
@@ -56,14 +58,14 @@ export default function Talk() {
       });
 
       if (response.status !== 200) {
-        throw new Error('Something went wrong');
+        throw new Error('Algo deu errado');
       }
 
       reset();
-      toast.success('Thanks for taking the time to write it.');
+      toast.success('E-mail enviado - Obrigado por escrever.');
     } catch (e) {
       console.error(e);
-      toast.error('Something went wrong. Try again later.');
+      toast.error('Algo deu errado. Tente novamente mais tarde.');
     }
   }
 
@@ -71,12 +73,13 @@ export default function Talk() {
     <Container>
       <Content>
         <Title />
-        <h2>Send me an email, like in the good old days.</h2>
+        <h2>Me envie um email. Como nos velhos tempos.</h2>
         <Paragraph>
-          <strong>I love chatting</strong> with software engineers, tech
-          founders, students, and creators. <strong>I'm a busy person</strong>,
-          so I can't promise that I'll reply to your email right away, but I'll
-          try my best to respond in a timely manner.
+          <strong>Amo conversar</strong> com engenheiros de software, fundadores
+          de tecnologia, estudantes, e criadores.{' '}
+          <strong>Sou uma pessoa ocupada</strong>, então não posso prometer que
+          vou responder seu email imediatamente, mas vou responder com tempo
+          assim que puder.
         </Paragraph>
         <Form onSubmit={handleSubmit(onSubmit)}>
           <FormGroup>
