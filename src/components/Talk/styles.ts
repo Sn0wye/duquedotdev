@@ -42,9 +42,8 @@ export const Label = styled.label`
 `;
 
 export const Input = styled.input`
-  background: none;
+  background: #f4f4f5;
   border: 1px solid #8f9ba8;
-  border-radius: 0.5rem;
   padding: 1.2rem;
   height: 2rem;
 
@@ -56,10 +55,12 @@ export const Input = styled.input`
 
 export const Textarea = styled.textarea`
   border: 1px solid #8f9ba8;
-  border-radius: 0.5rem;
   padding: 1.2rem;
   min-width: 100%;
   max-width: 100%;
+  background: #f4f4f5;
+
+  resize: none;
 
   &:focus {
     outline: none;
@@ -75,9 +76,8 @@ export const ErrorMessage = styled.p`
 
 export const Button = styled.button`
   color: var(--text-body);
-  background: #fff;
-  border: 1px solid #fff;
-  border-radius: 0.5rem;
+  background: lightgray;
+  border: 1px solid transparent;
   cursor: pointer;
   padding: 0.625rem;
   margin-top: 0.3125rem;
