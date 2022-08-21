@@ -2,7 +2,7 @@ import {
   Button,
   Container,
   Content,
-  Error,
+  ErrorMessage,
   Form,
   FormGroup,
   Input,
@@ -12,10 +12,11 @@ import {
 } from '../../components/Talk/styles';
 
 import { zodResolver } from '@hookform/resolvers/zod';
-import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import * as z from 'zod';
 import { Title } from '../../components/Title';
+
+import toast, { Toaster } from 'react-hot-toast';
 
 const emailSchema = z.object({
   name: z.string(),
@@ -30,9 +31,6 @@ interface IEmailInputs {
 }
 
 export default function Talk() {
-  const [isEmailSent, setIsEmailSent] = useState(false);
-  const [showToast, setShowToast] = useState(false);
-
   const {
     register,
     handleSubmit,
@@ -49,20 +47,23 @@ export default function Talk() {
       : 'http://localhost:3000/api';
 
     try {
-      await fetch(`${base}/email`, {
+      const response = await fetch(`${base}/email`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify(data),
       });
-      setIsEmailSent(true);
-      setShowToast(true);
+
+      if (response.status !== 200) {
+        throw new Error('Something went wrong');
+      }
+
       reset();
+      toast.success('Thanks for taking the time to write it.');
     } catch (e) {
       console.error(e);
-      setIsEmailSent(false);
-      setShowToast(true);
+      toast.error('Something went wrong. Try again later.');
     }
   }
 
@@ -81,12 +82,14 @@ export default function Talk() {
           <FormGroup>
             <Label htmlFor="name">Name</Label>
             <Input placeholder="John Doe" {...register('name')} />
-            {errors.name && <Error>{errors.name.message}</Error>}
+            {errors.name && <ErrorMessage>{errors.name.message}</ErrorMessage>}
           </FormGroup>
           <FormGroup>
             <Label htmlFor="email">Email</Label>
             <Input placeholder="john@doe.com" {...register('email')} />
-            {errors.email && <Error>{errors.email.message}</Error>}
+            {errors.email && (
+              <ErrorMessage>{errors.email.message}</ErrorMessage>
+            )}
           </FormGroup>
           <FormGroup>
             <Label htmlFor="message">Message</Label>
@@ -95,13 +98,16 @@ export default function Talk() {
               rows={4}
               {...register('message')}
             />
-            {errors.message && <Error>{errors.message.message}</Error>}
+            {errors.message && (
+              <ErrorMessage>{errors.message.message}</ErrorMessage>
+            )}
           </FormGroup>
           <FormGroup>
             <Button type="submit">Send</Button>
           </FormGroup>
         </Form>
       </Content>
+      <Toaster position="bottom-right" toastOptions={{}} />
     </Container>
   );
 }
