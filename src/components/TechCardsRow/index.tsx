@@ -1,7 +1,15 @@
-import { AssetCard, Container, Content, StyledTextCard } from './styles';
+import Image from 'next/image';
+import {
+  Container,
+  Content,
+  ImageContainer,
+  StyledAssetCard,
+  StyledTextCard,
+} from './styles';
 
-interface TechCardsProps {
-  textCard?: TextCard;
+interface Props {
+  textCard: TextCard;
+  imagePaths: string[];
 }
 
 interface TextCard {
@@ -10,25 +18,48 @@ interface TextCard {
   position?: 'left' | 'middle' | 'right';
 }
 
-export function TechCardsRow({ textCard }: TechCardsProps) {
+/**
+ * TechCardsRow component
+ * @param textCard - TextCard object with title, content and position
+ * @param imagePaths - Array of image paths (max 3)
+ */
+
+export function TechCardsRow(props: Props) {
+  const {
+    textCard: { position, ...textCard },
+    imagePaths,
+  } = props;
+
   return (
     <Container>
       <Content>
-        {textCard?.position === 'left' ? (
-          <TextCard {...textCard} />
-        ) : (
-          <AssetCard />
+        {position === 'left' && (
+          <>
+            <TextCard {...textCard} />
+            {imagePaths.map((imagePath, index) => (
+              <AssetCard key={index} src={imagePath} />
+            ))}
+          </>
         )}
-        {textCard?.position === 'middle' ? (
-          <TextCard {...textCard} />
-        ) : (
-          <AssetCard />
+        {position === 'middle' && (
+          <>
+            <AssetCard src={imagePaths[0]} />
+            <TextCard {...textCard} />
+            <AssetCard src={imagePaths[1]} />
+          </>
         )}
-        {textCard?.position === 'right' ? (
-          <TextCard {...textCard} />
-        ) : (
-          <AssetCard />
+        {position === 'right' && (
+          <>
+            {imagePaths.map((imagePath, index) => (
+              <AssetCard key={index} src={imagePath} />
+            ))}
+            <TextCard {...textCard} />
+          </>
         )}
+        {!position &&
+          imagePaths.map((imagePath, index) => (
+            <AssetCard key={index} src={imagePath} />
+          ))}
       </Content>
     </Container>
   );
@@ -40,5 +71,19 @@ const TextCard = ({ title, content }: TextCard) => {
       <h3>{title}</h3>
       <p>{content}</p>
     </StyledTextCard>
+  );
+};
+
+const AssetCard = ({ src }: { src: string }) => {
+  if (!src) {
+    return <StyledAssetCard />;
+  }
+
+  return (
+    <StyledAssetCard>
+      <ImageContainer>
+        <Image layout="fill" objectFit="cover" src={src} />
+      </ImageContainer>
+    </StyledAssetCard>
   );
 };

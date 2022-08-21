@@ -37,14 +37,15 @@ export const StyledTextCard = styled.div`
   }
 `;
 
-export const AssetCard = styled.div`
+export const StyledAssetCard = styled.div`
   background-color: #c2c2c2;
   height: 100%;
   width: 15.625rem;
   flex: 1;
+`;
 
-  img {
-    width: 100%;
-    height: 100%;
-  }
+export const ImageContainer = styled.div`
+  position: relative;
+  height: 100%;
+  width: 100%;
 `;
