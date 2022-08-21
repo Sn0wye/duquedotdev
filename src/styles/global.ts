@@ -30,7 +30,7 @@ html {
 
 body,
 input,
-button {
+button, textarea {
   font-family: Poppins, sans-serif;
   background: var(--background);
   color: var(--text-body);
