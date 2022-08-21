@@ -84,12 +84,12 @@ export default function Talk() {
         <Form onSubmit={handleSubmit(onSubmit)}>
           <FormGroup>
             <Label htmlFor="name">Name</Label>
-            <Input placeholder="John Doe" {...register('name')} />
+            <Input placeholder="João Silva" {...register('name')} />
             {errors.name && <ErrorMessage>{errors.name.message}</ErrorMessage>}
           </FormGroup>
           <FormGroup>
             <Label htmlFor="email">Email</Label>
-            <Input placeholder="john@doe.com" {...register('email')} />
+            <Input placeholder="joao@silva.com" {...register('email')} />
             {errors.email && (
               <ErrorMessage>{errors.email.message}</ErrorMessage>
             )}
@@ -97,7 +97,7 @@ export default function Talk() {
           <FormGroup>
             <Label htmlFor="message">Message</Label>
             <Textarea
-              placeholder="Your message here :P"
+              placeholder="Sua mensagem aqui :P"
               rows={4}
               {...register('message')}
             />
