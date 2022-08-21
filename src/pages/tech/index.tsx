@@ -14,9 +14,20 @@ export default function Tech() {
             'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500.',
           position: 'left',
         }}
+        imagePaths={[
+          '/static/image/cachorro.jpg',
+          '/static/image/cachorro.jpg',
+        ]}
       />
 
-      <TechCardsRow />
+      <TechCardsRow
+        textCard={{}}
+        imagePaths={[
+          '/static/image/cachorro.jpg',
+          '/static/image/cachorro.jpg',
+          '/static/image/cachorro.jpg',
+        ]}
+      />
       <TechCardsRow
         textCard={{
           title: 'aviation',
@@ -24,6 +35,10 @@ export default function Tech() {
             'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500.',
           position: 'right',
         }}
+        imagePaths={[
+          '/static/image/cachorro.jpg',
+          '/static/image/cachorro.jpg',
+        ]}
       />
 
       <HalfCard showTitle={false} title="" titleSide="right" />
@@ -35,6 +50,10 @@ export default function Tech() {
             'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500.',
           position: 'middle',
         }}
+        imagePaths={[
+          '/static/image/cachorro.jpg',
+          '/static/image/cachorro.jpg',
+        ]}
       />
       <Nutshell />
     </>
