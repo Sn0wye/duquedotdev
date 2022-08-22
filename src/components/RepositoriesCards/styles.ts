@@ -19,8 +19,14 @@ export const Content = styled.div`
   }
 `;
 
-export const Card = styled.div`
+export const StyledCard = styled.div`
   background-color: #c2c2c2;
   height: 100%;
   width: 100%;
+`;
+
+export const ImageContainer = styled.div`
+  position: relative;
+  width: 100%;
+  height: 100%;
 `;

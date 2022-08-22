@@ -1,13 +1,32 @@
-import { Card, Container, Content } from './styles';
+import Image from 'next/image';
+import { Container, Content, ImageContainer, StyledCard } from './styles';
 
-export function RepositoriesCards() {
+interface Props {
+  imagePaths: string[];
+}
+
+export function RepositoriesCards({ imagePaths }: Props) {
   return (
     <Container>
       <Content>
-        <Card />
-        <Card />
-        <Card />
+        {imagePaths.map((imagePath, index) => (
+          <Card key={index} imagePath={imagePath} />
+        ))}
       </Content>
     </Container>
   );
 }
+
+const Card = ({ imagePath }: { imagePath: string }) => {
+  if (!imagePath) {
+    return <StyledCard />;
+  }
+
+  return (
+    <StyledCard>
+      <ImageContainer>
+        <Image src={imagePath} layout="fill" objectFit="cover" />
+      </ImageContainer>
+    </StyledCard>
+  );
+};
