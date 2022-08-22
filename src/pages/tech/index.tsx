@@ -41,7 +41,13 @@ export default function Tech() {
         ]}
       />
 
-      <HalfCard showTitle={false} title="" titleSide="right" />
+      <HalfCard
+        title={{
+          content: '',
+          visible: false,
+        }}
+        imagePath="/static/image/lago.jpg"
+      />
 
       <TechCardsRow
         textCard={{

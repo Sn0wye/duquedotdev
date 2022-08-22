@@ -8,7 +8,13 @@ export default function About() {
     <>
       <Title />
       <RepositoriesCards />
-      <HalfCard showTitle={false} title="" titleSide="right" />
+      <HalfCard
+        title={{
+          content: '',
+          visible: false,
+        }}
+        imagePath="/static/image/lago.jpg"
+      />
       <RepositoriesCards />
       <Nutshell />
     </>

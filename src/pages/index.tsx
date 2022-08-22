@@ -9,30 +9,39 @@ export default function Home() {
       <Title />
 
       <HalfCard
-        titleSide="right"
-        title="saiba mais sobre mim"
+        title={{
+          content: 'saiba mais sobre mim',
+          position: 'right',
+        }}
         link={{
           title: 'about',
           href: '/about',
         }}
+        imagePath=""
       />
 
       <HalfCard
-        titleSide="left"
-        title="minha formação profissional"
+        title={{
+          content: 'minha formação profissional',
+          position: 'left',
+        }}
         link={{
           title: 'tech',
           href: '/tech',
         }}
+        imagePath=""
       />
 
       <HalfCard
-        titleSide="right"
-        title="desafios ativos"
+        title={{
+          content: 'desafios ativos',
+          position: 'right',
+        }}
         link={{
           title: 'github',
           href: 'https://github.com/duquedotdev',
         }}
+        imagePath=""
       />
       <RepositoriesCards />
       <Blog />
