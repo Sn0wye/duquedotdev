@@ -7,7 +7,13 @@ export default function About() {
   return (
     <>
       <Title />
-      <RepositoriesCards />
+      <RepositoriesCards
+        imagePaths={[
+          '/static/image/cachorro.jpg',
+          '/static/image/cachorro.jpg',
+          '/static/image/cachorro.jpg',
+        ]}
+      />
       <HalfCard
         title={{
           content: '',
@@ -15,7 +21,13 @@ export default function About() {
         }}
         imagePath="/static/image/lago.jpg"
       />
-      <RepositoriesCards />
+      <RepositoriesCards
+        imagePaths={[
+          '/static/image/cachorro.jpg',
+          '/static/image/cachorro.jpg',
+          '/static/image/cachorro.jpg',
+        ]}
+      />
       <Nutshell />
     </>
   );
