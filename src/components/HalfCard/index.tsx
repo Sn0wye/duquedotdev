@@ -1,18 +1,25 @@
+import Image from 'next/image';
 import Link from 'next/link';
 import {
-  AssetArea,
   CardContent,
   CardLink,
   CardTitle,
   Container,
   Content,
+  ImageContainer,
+  StyledAssetArea,
 } from './styles';
 
-interface HalfCardProps {
-  showTitle?: boolean;
-  title: string;
-  titleSide: 'left' | 'right';
+type Props = {
+  title: Title;
+  imagePath: string;
   link?: Link;
+};
+
+interface Title {
+  content: string;
+  visible?: boolean;
+  position?: 'left' | 'right';
 }
 
 interface Link {
@@ -20,36 +27,37 @@ interface Link {
   href: string;
 }
 
-export function HalfCard({
-  showTitle = true,
-  titleSide,
-  title,
-  link,
-}: HalfCardProps) {
-  const splittedTitle = title.split(' ');
+export function HalfCard(props: Props) {
+  const {
+    title: { position, content, visible = true, ...title },
+    link,
+    imagePath,
+  } = props;
+  const splittedContent = title && content.split(' ');
 
   return (
     <Container>
       <Content>
-        {titleSide === 'right' && <AssetArea />}
-        {showTitle && (
+        {position === 'right' && <AssetArea src={imagePath} />}
+        {visible && (
           <CardContent>
             <CardTitle>
-              {splittedTitle.map((word, index) => (
+              {splittedContent.map((word, index) => (
                 <h3 key={index}>{word}</h3>
               ))}
             </CardTitle>
 
-            {link && renderLink(link)}
+            {link && <StyledLink {...link} />}
           </CardContent>
         )}
-        {titleSide === 'left' && <AssetArea />}
+        {position === 'left' && <AssetArea src={imagePath} />}
+        {!position && <AssetArea src={imagePath} />}
       </Content>
     </Container>
   );
 }
 
-const renderLink = (link: Link) => {
+const StyledLink = (link: Link) => {
   return link.href.startsWith('http') ? (
     <CardLink href={link.href} target="_blank" rel="noreferrer">
       {link.title}
@@ -58,5 +66,19 @@ const renderLink = (link: Link) => {
     <Link href={link.href} rel="noreferrer">
       <CardLink>{link.title}</CardLink>
     </Link>
+  );
+};
+
+const AssetArea = ({ src }: { src: string }) => {
+  if (!src) {
+    return <StyledAssetArea />;
+  }
+
+  return (
+    <StyledAssetArea>
+      <ImageContainer>
+        <Image layout="fill" objectFit="cover" src={src} />
+      </ImageContainer>
+    </StyledAssetArea>
   );
 };

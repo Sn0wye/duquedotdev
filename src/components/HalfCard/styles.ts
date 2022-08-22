@@ -20,11 +20,11 @@ export const Content = styled.section`
     flex-direction: column;
   }
 `;
-export const AssetArea = styled.div`
+export const StyledAssetArea = styled.div`
   background-color: #c2c2c2;
   flex: 1;
   width: 100%;
-  aspect-ratio: 1/1;
+  min-height: 25rem;
 `;
 
 export const CardContent = styled.div`
@@ -97,4 +97,10 @@ export const CardLink = styled.a`
       animation: ${slideDown} 0.2s ease-in-out;
     }
   }
+`;
+
+export const ImageContainer = styled.div`
+  position: relative;
+  height: 100%;
+  width: 100%;
 `;
