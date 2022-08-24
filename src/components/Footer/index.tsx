@@ -8,6 +8,9 @@ export function Footer() {
           <h1>find me</h1>
           <h3>digitally</h3>
           <span>&copy; 2022 Felipe Duque</span>
+          <span>
+            Made with 💜 by <a href="https://snowye.dev">Snowye</a>
+          </span>
         </FindMe>
         <Socials>
           <SocialLink href="#" rel="noreferrer" target="_blank">

@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 
 export const Container = styled.footer`
   display: flex;
@@ -42,7 +42,25 @@ export const SocialLink = styled.a`
   }
 `;
 
+const hoverEffect = keyframes`
+  0% {
+    opacity: 0;
+    width: 0%;
+  }
+
+  50% {
+
+  }
+  100% {
+    opacity: 1;
+    width: 100%;
+  }
+`;
+
 export const FindMe = styled.div`
+  display: flex;
+  flex-direction: column;
+
   h1 {
     font-size: 3.5rem;
     font-weight: 900;
@@ -52,5 +70,28 @@ export const FindMe = styled.div`
   h3 {
     font-size: 2.2rem;
     font-weight: 900;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+    transition: all ease-in-out 0.3s;
+    position: relative;
+
+    &:hover {
+      color: #fca311;
+
+      &:after {
+        content: '';
+        height: 1px;
+        background: #fca311;
+        position: absolute;
+        width: 100%;
+        left: 0;
+        bottom: 0;
+        margin-top: 1rem;
+        animation: ${hoverEffect} 0.3s ease-in-out;
+      }
+    }
   }
 `;
