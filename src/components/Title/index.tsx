@@ -5,7 +5,7 @@ export function Title() {
     <Container>
       <Content>
         <h1>
-          um <span>QA engineer</span>
+          um <span>software engineer</span>
         </h1>
 
         <h1>

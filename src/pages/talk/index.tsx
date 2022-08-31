@@ -45,7 +45,7 @@ export default function Talk() {
   async function onSubmit(data: IEmailInputs) {
     const isProduction = process.env.NODE_ENV === 'production';
     const base = isProduction
-      ? 'https://snowye.dev/api'
+      ? 'https://duque.dev/api'
       : 'http://localhost:3000/api';
 
     try {
@@ -76,10 +76,11 @@ export default function Talk() {
         <h2>Me envie um email. Como nos velhos tempos.</h2>
         <Paragraph>
           <strong>Amo conversar</strong> com engenheiros de software, fundadores
-          de tecnologia, estudantes, e criadores.{' '}
-          <strong>Sou uma pessoa ocupada</strong>, então não posso prometer que
-          vou responder seu email imediatamente, mas vou responder com tempo
-          assim que puder.
+          de tecnologia, estudantes, e criadores de boa tecnologia.{' '}
+          <strong>É um tech recruiter?</strong> Se você acredita que faça
+          sentido conversarmos, por favor, em sua mensagem inclia a hashtag
+          #maionese. Assim posso filtrar as mensagens que não sejam automáticas,
+          ou vagas com a qual não faça sentido.
         </Paragraph>
         <Form onSubmit={handleSubmit(onSubmit)}>
           <FormGroup>

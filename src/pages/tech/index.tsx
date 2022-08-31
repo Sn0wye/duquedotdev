@@ -9,35 +9,35 @@ export default function Tech() {
       <Title />
       <TechCardsRow
         textCard={{
-          title: 'ai & ml',
+          title: 'as a pilot',
           content:
-            'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500.',
+            'Você pode me perguntar pessoalmente: 1A103TCM6958. Este era o modelo da hélice que eu voava. Sou bastante curioso e estudioso. E isto foi um diferencial na trajetócia como dev.',
           position: 'left',
         }}
         imagePaths={[
-          '/static/image/cachorro.jpg',
-          '/static/image/cachorro.jpg',
+          '/static/image/pilotando.jpeg',
+          '/static/image/campo_de_marte.jpeg',
         ]}
       />
 
       <TechCardsRow
         textCard={{}}
         imagePaths={[
-          '/static/image/cachorro.jpg',
-          '/static/image/cachorro.jpg',
-          '/static/image/cachorro.jpg',
+          '/static/image/cirrus.jpeg',
+          '/static/image/b737.jpeg',
+          '/static/image/g650er.jpg',
         ]}
       />
       <TechCardsRow
         textCard={{
-          title: 'aviation',
+          title: 'as a engineer',
           content:
-            'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500.',
+            'Contribuo ativamente para construção de softwares, codando e produzindo de insights para meu time, além de ajudar com isso meu empregador a gerar e proteger a integridade e continuidade do seu ativo mais valioso: seus dados.',
           position: 'right',
         }}
         imagePaths={[
-          '/static/image/cachorro.jpg',
-          '/static/image/cachorro.jpg',
+          '/static/image/discurso.jpeg',
+          '/static/image/eu_e_lito.jpg',
         ]}
       />
 
@@ -46,19 +46,19 @@ export default function Tech() {
           content: '',
           visible: false,
         }}
-        imagePath="/static/image/lago.jpg"
+        imagePath="/static/image/lancha.jpg"
       />
 
       <TechCardsRow
         textCard={{
-          title: 'software qa',
+          title: 'as a darwinist',
           content:
-            'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500.',
+            'Estou em constante evolução. Seja esta pessoal, digital, ou mesmo espiritual. Como um bom dev, eu me atualizo constantemente, e me aperfeiçoando para melhorar a qualidade de vida de todos.',
           position: 'middle',
         }}
         imagePaths={[
-          '/static/image/cachorro.jpg',
-          '/static/image/cachorro.jpg',
+          '/static/image/em_brasilia.jpg',
+          '/static/image/bike.jpeg',
         ]}
       />
       <Nutshell />

@@ -9,9 +9,9 @@ export default function About() {
       <Title />
       <RepositoriesCards
         imagePaths={[
-          '/static/image/cachorro.jpg',
-          '/static/image/cachorro.jpg',
-          '/static/image/cachorro.jpg',
+          '/static/image/felipe_duque_novinho2.jpeg',
+          '/static/image/felipe_duque_novinho1.jpeg',
+          '/static/image/felipe_duque_novinho.jpeg',
         ]}
       />
       <HalfCard
@@ -19,13 +19,13 @@ export default function About() {
           content: '',
           visible: false,
         }}
-        imagePath="/static/image/lago.jpg"
+        imagePath="/static/image/felipe_duque_arara.jpg"
       />
       <RepositoriesCards
         imagePaths={[
-          '/static/image/cachorro.jpg',
-          '/static/image/cachorro.jpg',
-          '/static/image/cachorro.jpg',
+          '/static/image/campo_de_marte.jpeg',
+          '/static/image/floripa.jpeg',
+          '/static/image/google.jpeg',
         ]}
       />
       <Nutshell />

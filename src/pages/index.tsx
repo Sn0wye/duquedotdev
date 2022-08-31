@@ -17,7 +17,7 @@ export default function Home() {
           title: 'about',
           href: '/about',
         }}
-        imagePath="/static/image/cachorro.jpg"
+        imagePath="/static/image/felipe_duque_duquedotdev.jpg"
       />
 
       <HalfCard
@@ -29,7 +29,7 @@ export default function Home() {
           title: 'tech',
           href: '/tech',
         }}
-        imagePath="/static/image/cachorro.jpg"
+        imagePath="/static/image/felipeduque_piloto.jpg"
       />
 
       <HalfCard
@@ -41,15 +41,15 @@ export default function Home() {
           title: 'github',
           href: 'https://github.com/duquedotdev',
         }}
-        imagePath="/static/image/cachorro.jpg"
+        imagePath="/static/image/fmc_felipe_duque.jpg"
       />
-      <RepositoriesCards
+      {/* <RepositoriesCards
         imagePaths={[
           '/static/image/cachorro.jpg',
           '/static/image/cachorro.jpg',
           '/static/image/cachorro.jpg',
         ]}
-      />
+      /> */}
       <Blog />
     </>
   );
